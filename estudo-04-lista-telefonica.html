@@ -53,7 +53,8 @@
 					delete $scope.contato;
 				};
 				$scope.delContato = function(contato) {
-					console.log(contato);
+					contato.selecionado=true;
+					this.delContatos($scope.contatos);
 				};
 				$scope.delContatos = function(contatos) {
 					$scope.contatos = contatos.filter(function (contato) {
